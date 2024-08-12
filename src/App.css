@@ -1,4 +1,5 @@
 /* src/App.css */
+
 body {
   background-color: #282c34;
   color: #ffffff;
@@ -8,10 +9,12 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
   margin-bottom: 20px;
   color: #61dafb;
@@ -23,9 +26,9 @@ button {
   border: none;
   border-radius: 5px;
   color: #282c34;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  margin: 10px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  margin: 10px 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -40,17 +43,17 @@ button:hover {
   width: 100%;
   max-width: 400px;
   margin: 20px auto;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   background-color: #444c56;
-  padding: 10px 20px;
+  padding: 10px;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .board {
   display: grid;
-  grid-template-columns: repeat(10, 40px);
-  grid-template-rows: repeat(10, 40px);
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: repeat(10, 30px);
   gap: 5px;
   margin: 20px auto;
   width: fit-content;
@@ -61,13 +64,13 @@ button:hover {
 }
 
 .cell {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #999;
-  font-size: 18px;
+  font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;
   box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
@@ -99,4 +102,36 @@ button:hover {
   border-radius: 5px;
   text-align: center;
   color: #282c34;
+}
+
+/* Estilos responsivos para móviles */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px 5px;
+  }
+
+  .board {
+    grid-template-columns: repeat(10, 25px);
+    grid-template-rows: repeat(10, 25px);
+    gap: 4px;
+  }
+
+  .cell {
+    width: 25px;
+    height: 25px;
+    font-size: 0.8rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
 }
